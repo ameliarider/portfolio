@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { capstone, miniCapstone, projects } from '../data/portfolioData';
+import { capstone, miniCapstone, eligibilityApp, projects } from '../data/portfolioData';
 
 const ProjectCard = ({ project, index, isLarge = false }) => {
   const { ref, isInView } = useScrollAnimation(0.2);
@@ -118,7 +118,7 @@ const LargeProjectCard = ({ project, imageRight = false, index }) => {
           transition={{ duration: 0.3 }}
         >
           <img
-            src={`https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=800`}
+            src={project.image}
             alt={project.imageAlt}
             className="w-full h-64 lg:h-80 object-cover"
           />
@@ -221,6 +221,9 @@ const Projects = () => {
           
           {/* Mini-Capstone Project */}
           <LargeProjectCard project={miniCapstone} imageRight={true} index={1} />
+
+          {/* Eligibility App */}
+          <LargeProjectCard project={eligibilityApp} imageRight={false} index={1} />
           
           {/* Other Projects */}
           {projects.length > 0 && (

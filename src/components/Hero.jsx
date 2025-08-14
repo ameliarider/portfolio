@@ -43,7 +43,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl"
           >
-            I solve real-world problems with code.
+            Tech professional dedicated to improving health outcomes by using technology to increase access to care.
           </motion.p>
         </div>
 
